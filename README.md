@@ -14,6 +14,7 @@ Or `brew tap ml-lubich/tap` and then `brew install <formula>`. In a `brew bundle
 tap "ml-lubich/tap"
 brew "pdfify-md"
 brew "confluence-cli"
+brew "bitbucket-client"
 ```
 
 ## Formulae
@@ -43,9 +44,21 @@ confluence bulk move --help
 
 Source: https://github.com/ml-lubich/confluence-cli
 
+### bitbucket-client
+
+Lightweight `gh`-style CLI for Bitbucket Cloud and Data Center, including a read-only MCP server.
+
+```bash
+brew install ml-lubich/tap/bitbucket-client
+bb --version
+```
+
+Source: https://github.com/ml-lubich/bitbucket-cli
+
 ## Notes
 
-Both tools are also on npm (`pdfify-md`, `ml-lubich/confluence-cli`). They are Node.js tools, so there is no `pip`/PyPI distribution.
+The Node.js tools are also on npm (`pdfify-md`, `ml-lubich/confluence-cli`).
+`bitbucket-client` is also available from PyPI with `pip install bitbucket-client`.
 
 ## Documentation
 
