@@ -12,12 +12,29 @@ Or `brew tap ml-lubich/tap` and then `brew install <formula>`. In a `brew bundle
 
 ```ruby
 tap "ml-lubich/tap"
+brew "imsg"
+brew "imail"
+brew "inotes"
+brew "wa"
 brew "pdfify-md"
 brew "confluence-cli"
 brew "bitbucket-client"
 ```
 
 ## Formulae
+
+### imsg / imail / inotes / wa (agent CLI family)
+
+Typer CLIs with `-h` / `--help` and `agent schema`. PyPI: `mac-imsg`, `mac-imail`, `mac-inotes`, `mac-wa` (+ `mac-wa-mcp`).
+
+```bash
+brew install ml-lubich/tap/imsg
+brew install ml-lubich/tap/imail
+brew install ml-lubich/tap/inotes
+brew install ml-lubich/tap/wa
+imsg agent schema
+imail -h
+```
 
 ### pdfify-md
 

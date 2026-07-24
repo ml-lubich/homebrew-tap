@@ -2,7 +2,7 @@
 class Wa < Formula
   include Language::Python::Virtualenv
 
-  desc "WhatsApp bridge CLI (wa) — agent-friendly Typer tool (imsg family)"
+  desc "WhatsApp CLI (wa) + MCP (wa-mcp) — imsg-family Typer tools"
   homepage "https://github.com/ml-lubich/whatsapp-mcp"
   url "https://files.pythonhosted.org/packages/a2/be/3349c70811844d5dcbdaaac8e76390b5ad3e32c35975059707e96fc29e1a/mac_wa-0.1.0.tar.gz"
   sha256 "b375b1a16ebfa41889c49f0c00695c7fcee10d383fc78397355a526509b0f29c"
@@ -12,8 +12,9 @@ class Wa < Formula
 
   def install
     virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", "mac-wa==0.1.0"
+    system libexec/"bin/pip", "install", "mac-wa==0.1.0", "mac-wa-mcp==0.1.0"
     bin.install_symlink libexec/"bin/wa"
+    bin.install_symlink libexec/"bin/wa-mcp"
   end
 
   test do
