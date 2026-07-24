@@ -4,15 +4,15 @@ class Imail < Formula
 
   desc "Apple Mail.app CLI — agent-friendly Typer tool (imsg family)"
   homepage "https://github.com/ml-lubich/imail"
-  url "https://files.pythonhosted.org/packages/d3/fe/888e105087b60affc281ac8a914d8aa363d4f95cf82e6983138305aa75d5/mac_imail-0.1.0.tar.gz"
-  sha256 "051f750fbeb6604be9cfabe830b1283e88a7203dadae71823349b2cec64862bf"
+  url "https://files.pythonhosted.org/packages/8d/02/651264ebca1c50fb175115811ab38d5d74ad0fb95296571682514eab3f9a/mac_imail-0.1.1.tar.gz"
+  sha256 "38172e1f4dcbb78a1474ea35582961d588cc3c0cd493ae871cb73ccbfe0791e4"
   license "MIT"
 
   depends_on "python@3.12"
 
   def install
     virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", "mac-imail==0.1.0"
+    system libexec/"bin/pip", "install", "mac-imail==0.1.1"
     bin.install_symlink libexec/"bin/imail"
   end
 
