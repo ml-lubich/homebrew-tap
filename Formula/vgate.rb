@@ -5,15 +5,15 @@ class Vgate < Formula
 
   desc "Switch between multiple Vercel CLI logins — CLI + MCP server"
   homepage "https://github.com/ml-lubich/vercel-mcp"
-  url "https://files.pythonhosted.org/packages/48/fa/37def95e7d31e5e599e93922bea6a95651a8595e4be1ec252494e5537a87/vercel_mcp-0.1.0.tar.gz"
-  sha256 "5589ec95e44f8f04a291503224bffe5a72bc497a8786957326f1690887950cbd"
+  url "https://files.pythonhosted.org/packages/c0/9b/33a93ea10130c15231da960a82c31489a8dcac7d3f24f93a59e4abc2c40b/vercel_mcp-0.3.0.tar.gz"
+  sha256 "16aac438d115fcad7f2e94a8d7689678ea4a192bf544c38d50dc42c51372f27e"
   license "MIT"
 
   depends_on "python@3.12"
 
   def install
     virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", "vercel-mcp==0.1.0"
+    system libexec/"bin/pip", "install", "vercel-mcp==0.3.0"
     bin.install_symlink libexec/"bin/vgate"
     bin.install_symlink libexec/"bin/vgate-mcp"
   end

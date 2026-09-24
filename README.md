@@ -19,6 +19,10 @@ brew "wa"
 brew "pdfify-md"
 brew "confluence-cli"
 brew "bitbucket-client"
+brew "vgate"
+brew "ical"
+brew "jenkins-mcp"
+brew "twig"
 ```
 
 ## Formulae
@@ -72,10 +76,54 @@ bb --version
 
 Source: https://github.com/ml-lubich/bitbucket-cli
 
+### vgate
+
+Switch between multiple Vercel CLI logins. PyPI: `vercel-mcp`.
+
+```bash
+brew install ml-lubich/tap/vgate
+vgate ls
+```
+
+Source: https://github.com/ml-lubich/vercel-mcp
+
+### ical
+
+macOS Calendar.app CLI and MCP server. PyPI: `mac-ical` (command is `ical`).
+
+```bash
+brew install ml-lubich/tap/ical
+ical calendars
+```
+
+Source: https://github.com/ml-lubich/ical
+
+### jenkins-mcp
+
+Jenkins CLI and MCP server. PyPI: `jenkins-mcp-cli`.
+
+```bash
+brew install ml-lubich/tap/jenkins-mcp
+jenkins-mcp -h
+```
+
+Source: https://github.com/ml-lubich/jenkins-mcp
+
+### twig
+
+Git worktree CLI. PyPI: `twig-cli`. The formula builds the Rust extension, so a Rust compiler is required at install time.
+
+```bash
+brew install ml-lubich/tap/twig
+twig --help
+```
+
+Source: https://github.com/ml-lubich/twig
+
 ## Notes
 
-The Node.js tools are also on npm (`pdfify-md`, `ml-lubich/confluence-cli`).
-`bitbucket-client` is also available from PyPI with `pip install bitbucket-client`.
+The Node.js tools are also on npm (`pdfify-md`, `@ml-lubich/confluence-cli`).
+Python tools are also on PyPI: `mac-imsg`, `mac-imail`, `mac-inotes`, `mac-wa`, `bitbucket-client`, `vercel-mcp`, `mac-ical`, `jenkins-mcp-cli`, `twig-cli`.
 
 ## Documentation
 
