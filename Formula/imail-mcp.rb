@@ -11,8 +11,7 @@ class ImailMcp < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", "imail-mcp==0.1.1"
+    virtualenv_create(libexec, "python3.12").pip_install "imail-mcp==0.1.1"
     bin.install_symlink libexec/"bin/imail"
   end
 

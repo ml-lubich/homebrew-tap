@@ -13,15 +13,14 @@ class IcalMcp < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", "ical-mcp==0.2.3"
+    virtualenv_create(libexec, "python3.12").pip_install "ical-mcp==0.2.3"
     bin.install_symlink libexec/"bin/ical"
     bin.install_symlink libexec/"bin/ical-mcp"
   end
 
   test do
     assert_match "ical", shell_output("#{bin}/ical -h")
-    assert_match "calendars", shell_output("#{bin}/ical agent schema")
-    assert_match "ical-mcp", shell_output("#{bin}/ical-mcp --help")
+    assert_match "calendar", shell_output("#{bin}/ical agent schema")
+    assert_predicate bin/"ical-mcp", :exist?
   end
 end

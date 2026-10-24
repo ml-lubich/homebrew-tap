@@ -13,8 +13,7 @@ class Twig < Formula
   depends_on "rust" => :build
 
   def install
-    virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", "twig-cli==0.2.0"
+    virtualenv_create(libexec, "python3.12").pip_install "twig-cli==0.2.0"
     bin.install_symlink libexec/"bin/twig"
   end
 

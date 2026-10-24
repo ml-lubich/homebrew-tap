@@ -15,8 +15,7 @@ class ImsgMcp < Formula
 
   def install
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix.to_s
-    virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", "imsg-mcp==0.1.2"
+    virtualenv_create(libexec, "python3.12").pip_install "imsg-mcp==0.1.2"
     bin.install_symlink libexec/"bin/imsg"
     bin.install_symlink libexec/"bin/imsg-mcp"
   end

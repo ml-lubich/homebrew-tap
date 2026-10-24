@@ -12,8 +12,7 @@ class VercelMcp < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", "vercel-mcp==0.3.0"
+    virtualenv_create(libexec, "python3.12").pip_install "vercel-mcp==0.3.0"
     bin.install_symlink libexec/"bin/vgate"
     bin.install_symlink libexec/"bin/vgate-mcp"
   end
