@@ -1,41 +1,43 @@
 # ml-lubich/homebrew-tap
 
-Homebrew tap for [@ml-lubich](https://github.com/ml-lubich)'s command-line tools.
+Homebrew tap for command-line and MCP tools.
 
 ## How do I install these formulae?
 
 ```bash
-brew install ml-lubich/tap/<formula>
+brew install <formula>
 ```
 
-Or `brew tap ml-lubich/tap` and then `brew install <formula>`. In a `brew bundle` `Brewfile`:
+After adding this tap, install any formula by name:
 
 ```ruby
-tap "ml-lubich/tap"
-brew "imsg"
-brew "imail"
-brew "inotes"
-brew "wa"
+brew "imsg-mcp"
+brew "imail-mcp"
+brew "inotes-mcp"
+brew "wa-mcp"
 brew "pdfify-md"
 brew "confluence-cli"
 brew "bitbucket-client"
-brew "vgate"
-brew "ical"
+brew "vercel-mcp"
+brew "ical-mcp"
 brew "jenkins-mcp"
 brew "twig"
+brew "pyosascript"
 ```
+
+The old formula names (`ical`, `imail`, `imsg`, `inotes`, `wa`, and `vgate`) remain available as aliases. The installed command names stay `ical`/`ical-mcp`, `imail`, `imsg`/`imsg-mcp`, `inotes`, `wa`/`wa-mcp`, and `vgate`/`vgate-mcp`.
 
 ## Formulae
 
-### imsg / imail / inotes / wa (agent CLI family)
+### imsg-mcp / imail-mcp / inotes-mcp / wa-mcp (agent CLI family)
 
-Typer CLIs with `-h` / `--help` and `agent schema`. PyPI: `mac-imsg`, `mac-imail`, `mac-inotes`, `mac-wa` (+ `mac-wa-mcp`).
+Typer CLIs with `-h` / `--help` and `agent schema`. PyPI distributions: `imsg-mcp`, `imail-mcp`, `inotes-mcp`, and `wa-mcp`. The WhatsApp MCP entry point is still published as `mac-wa-mcp` until its distribution rename is released.
 
 ```bash
-brew install ml-lubich/tap/imsg
-brew install ml-lubich/tap/imail
-brew install ml-lubich/tap/inotes
-brew install ml-lubich/tap/wa
+brew install imsg-mcp
+brew install imail-mcp
+brew install inotes-mcp
+brew install wa-mcp
 imsg agent schema
 imail -h
 ```
@@ -45,85 +47,78 @@ imail -h
 Convert Markdown files to PDFs, with Mermaid diagram support.
 
 ```bash
-brew install ml-lubich/tap/pdfify-md
+brew install pdfify-md
 pdfify-md document.md
 ```
 
 The formula bundles a matching Chrome for Testing, so Puppeteer works out of the box — no manual browser install. macOS / Apple Silicon.
 
-Source: https://github.com/ml-lubich/pdfify-md
 
 ### confluence-cli
 
 Confluence CLI with first-class bulk operations — `bulk move`, `bulk delete`, and idempotent `mirror` (local Markdown tree → Confluence) — plus folder-aware, cross-space moves. Built to be safely driven by AI agents (dry-run by default, structured errors, `--json`).
 
 ```bash
-brew install ml-lubich/tap/confluence-cli
+brew install confluence-cli
 confluence init            # one-time auth setup
 confluence bulk move --help
 ```
 
-Source: https://github.com/ml-lubich/confluence-cli
 
 ### bitbucket-client
 
 Lightweight `gh`-style CLI for Bitbucket Cloud and Data Center, including a read-only MCP server.
 
 ```bash
-brew install ml-lubich/tap/bitbucket-client
+brew install bitbucket-client
 bb --version
 ```
 
-Source: https://github.com/ml-lubich/bitbucket-cli
 
-### vgate
+### vercel-mcp
 
 Switch between multiple Vercel CLI logins. PyPI: `vercel-mcp`.
 
 ```bash
-brew install ml-lubich/tap/vgate
+brew install vercel-mcp
 vgate ls
 ```
 
-Source: https://github.com/ml-lubich/vercel-mcp
 
-### ical
+### ical-mcp
 
-macOS Calendar.app CLI and MCP server. PyPI: `mac-ical` (command is `ical`).
+macOS Calendar.app CLI and MCP server. PyPI: `ical-mcp` (command is `ical`).
 
 ```bash
-brew install ml-lubich/tap/ical
+brew install ical-mcp
 ical calendars
 ```
 
-Source: https://github.com/ml-lubich/ical
 
 ### jenkins-mcp
 
 Jenkins CLI and MCP server. PyPI: `jenkins-mcp-cli`.
 
 ```bash
-brew install ml-lubich/tap/jenkins-mcp
+brew install jenkins-mcp
 jenkins-mcp -h
 ```
 
-Source: https://github.com/ml-lubich/jenkins-mcp
 
 ### twig
 
 Git worktree CLI. PyPI: `twig-cli`. The formula builds the Rust extension, so a Rust compiler is required at install time.
 
 ```bash
-brew install ml-lubich/tap/twig
+brew install twig
 twig --help
 ```
 
-Source: https://github.com/ml-lubich/twig
 
 ## Notes
 
 The Node.js tools are also on npm (`pdfify-md`, `@ml-lubich/confluence-cli`).
-Python tools are also on PyPI: `mac-imsg`, `mac-imail`, `mac-inotes`, `mac-wa`, `bitbucket-client`, `vercel-mcp`, `mac-ical`, `jenkins-mcp-cli`, `twig-cli`.
+Python tools are also on PyPI: `imsg-mcp`, `imail-mcp`, `inotes-mcp`, `wa-mcp`, `mac-wa-mcp` (WhatsApp MCP entry point, pending rename), `bitbucket-client`, `vercel-mcp`, `ical-mcp`, `jenkins-mcp-cli`, `twig-cli`, `pyosascript`.
 
 ## Documentation
 

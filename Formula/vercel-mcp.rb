@@ -1,10 +1,10 @@
-# brew tap ml-lubich/tap && brew install vgate
-# PyPI package vercel-mcp (pure-python wheel + sdist). Keeps brew in sync with PyPI.
-class Vgate < Formula
+# Install with: brew install vercel-mcp
+# PyPI package vercel-mcp. Commands on PATH are `vgate` and `vgate-mcp`.
+class VercelMcp < Formula
   include Language::Python::Virtualenv
 
   desc "Switch between multiple Vercel CLI logins — CLI + MCP server"
-  homepage "https://github.com/ml-lubich/vercel-mcp"
+  homepage "https://pypi.org/project/vercel-mcp/"
   url "https://files.pythonhosted.org/packages/c0/9b/33a93ea10130c15231da960a82c31489a8dcac7d3f24f93a59e4abc2c40b/vercel_mcp-0.3.0.tar.gz"
   sha256 "16aac438d115fcad7f2e94a8d7689678ea4a192bf544c38d50dc42c51372f27e"
   license "MIT"
