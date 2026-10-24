@@ -9,6 +9,8 @@ class VercelMcp < Formula
   sha256 "16aac438d115fcad7f2e94a8d7689678ea4a192bf544c38d50dc42c51372f27e"
   license "MIT"
 
+  depends_on "rust" => :build
+  depends_on "openssl@3"
   depends_on "python@3.12"
 
   resource "annotated-doc" do
@@ -192,6 +194,7 @@ class VercelMcp < Formula
   end
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix.to_s
     virtualenv_install_with_resources
     bin.install_symlink libexec/"bin/vgate"
     bin.install_symlink libexec/"bin/vgate-mcp"

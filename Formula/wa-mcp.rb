@@ -8,6 +8,8 @@ class WaMcp < Formula
   sha256 "4d9bccb9b8f55c68ba35e581477a63499d7f78e1a16b24568d1cc2b11c395bf2"
   license "MIT"
 
+  depends_on "rust" => :build
+  depends_on "openssl@3"
   depends_on "python@3.12"
 
   resource "annotated-doc" do
@@ -226,6 +228,7 @@ class WaMcp < Formula
   end
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix.to_s
     virtualenv_install_with_resources
     bin.install_symlink libexec/"bin/wa"
     bin.install_symlink libexec/"bin/wa-mcp"

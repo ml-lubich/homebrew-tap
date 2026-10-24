@@ -10,6 +10,8 @@ class IcalMcp < Formula
   license "MIT"
 
   depends_on :macos
+  depends_on "rust" => :build
+  depends_on "openssl@3"
   depends_on "python@3.12"
 
   resource "annotated-doc" do
@@ -203,6 +205,7 @@ class IcalMcp < Formula
   end
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix.to_s
     virtualenv_install_with_resources
     bin.install_symlink libexec/"bin/ical"
     bin.install_symlink libexec/"bin/ical-mcp"

@@ -9,6 +9,8 @@ class JenkinsMcp < Formula
   sha256 "6cdbf4e105af497c620cfd6ef1d81ad4a3e2eaac8d18e90a1d57711c6b37d47f"
   license "MIT"
 
+  depends_on "rust" => :build
+  depends_on "openssl@3"
   depends_on "python@3.12"
 
   resource "annotated-types" do
@@ -152,6 +154,7 @@ class JenkinsMcp < Formula
   end
 
   def install
+    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix.to_s
     virtualenv_install_with_resources
     bin.install_symlink libexec/"bin/jenkins-mcp"
   end
