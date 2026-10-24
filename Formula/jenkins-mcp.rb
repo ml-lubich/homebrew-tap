@@ -12,7 +12,7 @@ class JenkinsMcp < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_create(libexec, "python3.12").pip_install "jenkins-mcp-cli==0.3.0"
+    virtualenv_create(libexec, "python3.12").pip_install buildpath
     bin.install_symlink libexec/"bin/jenkins-mcp"
   end
 

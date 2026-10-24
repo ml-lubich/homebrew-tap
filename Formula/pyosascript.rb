@@ -11,7 +11,7 @@ class Pyosascript < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_create(libexec, "python3.12").pip_install "pyosascript==0.1.0"
+    virtualenv_create(libexec, "python3.12").pip_install buildpath
     bin.install_symlink libexec/"bin/osascript-py"
   end
 

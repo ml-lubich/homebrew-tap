@@ -13,7 +13,7 @@ class IcalMcp < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_create(libexec, "python3.12").pip_install "ical-mcp==0.2.3"
+    virtualenv_create(libexec, "python3.12").pip_install buildpath
     bin.install_symlink libexec/"bin/ical"
     bin.install_symlink libexec/"bin/ical-mcp"
   end

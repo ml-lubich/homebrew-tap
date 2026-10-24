@@ -11,7 +11,9 @@ class WaMcp < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_create(libexec, "python3.12").pip_install ["wa-mcp==0.1.1", "mac-wa-mcp==0.1.0"]
+    venv = virtualenv_create(libexec, "python3.12")
+    venv.pip_install buildpath
+    venv.pip_install "mac-wa-mcp==0.1.0"
     bin.install_symlink libexec/"bin/wa"
     bin.install_symlink libexec/"bin/wa-mcp"
   end
