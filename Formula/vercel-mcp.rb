@@ -5,8 +5,8 @@ class VercelMcp < Formula
 
   desc "Switch between multiple Vercel CLI logins — CLI + MCP server"
   homepage "https://pypi.org/project/vercel-mcp/"
-  url "https://files.pythonhosted.org/packages/c0/9b/33a93ea10130c15231da960a82c31489a8dcac7d3f24f93a59e4abc2c40b/vercel_mcp-0.3.0.tar.gz"
-  sha256 "16aac438d115fcad7f2e94a8d7689678ea4a192bf544c38d50dc42c51372f27e"
+  url "https://files.pythonhosted.org/packages/82/d6/b472aeb82dfbc23d828258f6418127442a49747e4489896c6f118314c2d5/vercel_mcp-0.3.1.tar.gz"
+  sha256 "6de09c84b3c3ede5df2ce578df884d0500f3a886e1404f12bee652022132cfe5"
   license "MIT"
 
   depends_on "rust" => :build
@@ -164,13 +164,13 @@ class VercelMcp < Formula
   end
 
   resource "sse-starlette" do
-    url "https://files.pythonhosted.org/packages/e4/be/0123026f719d1a7936f214a88b553bb5701e04ff2511147c1dab0c5035eb/sse_starlette-3.5.0.tar.gz"
-    sha256 "75de713aa8a9441513cc283220826da079d982770965b951e9437720e8bafdb2"
+    url "https://files.pythonhosted.org/packages/af/2e/16b9cce59c2eebd2f944b41b01df119f8ee65535ce839c462f1b2c9ae2e0/sse_starlette-3.5.1.tar.gz"
+    sha256 "dbb1461cd53c1e284537c3ddcf92f54f24178519a3f1e335e49e5283993db0f7"
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/ad/eb/4e197bf26b023abafc5e9043ec8710d7de0fcb032d0969045236d72aa0b1/starlette-1.9.0.tar.gz"
-    sha256 "3d931de246ed870e35ce605974440816ef895e592f255d1396cfdf191d4c4318"
+    url "https://files.pythonhosted.org/packages/48/bb/3d8757f21e9a53d9035c9eb039a777047139a16bfdbedfc7a58241c3d914/starlette-1.10.0.tar.gz"
+    sha256 "b8399098d4c1e3522734f7235dc79b1fc967f96cf139c81e0fa30479e0685f9b"
   end
 
   resource "typer" do

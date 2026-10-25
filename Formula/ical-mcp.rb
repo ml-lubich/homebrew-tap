@@ -5,8 +5,8 @@ class IcalMcp < Formula
 
   desc "macOS Calendar.app CLI and MCP server"
   homepage "https://pypi.org/project/ical-mcp/"
-  url "https://files.pythonhosted.org/packages/df/0c/2807e59d0a5d4988011c6ff6161820e5e9a201d805b8ea570848314c857b/ical_mcp-0.2.3.tar.gz"
-  sha256 "021a634fde46a7522c23922de6985f6a144dac53d295de23bc8e4342d0f55ec7"
+  url "https://files.pythonhosted.org/packages/0c/89/55b564c809f85dc06da84617caa09ba7059e76a5241a44d6c89c0efe57bb/ical_mcp-0.2.4.tar.gz"
+  sha256 "b22879c10f18f391e016f9ee0d33134f500c68a32480b3e334a03cd943da658b"
   license "MIT"
 
   depends_on :macos
@@ -165,13 +165,13 @@ class IcalMcp < Formula
   end
 
   resource "sse-starlette" do
-    url "https://files.pythonhosted.org/packages/e4/be/0123026f719d1a7936f214a88b553bb5701e04ff2511147c1dab0c5035eb/sse_starlette-3.5.0.tar.gz"
-    sha256 "75de713aa8a9441513cc283220826da079d982770965b951e9437720e8bafdb2"
+    url "https://files.pythonhosted.org/packages/af/2e/16b9cce59c2eebd2f944b41b01df119f8ee65535ce839c462f1b2c9ae2e0/sse_starlette-3.5.1.tar.gz"
+    sha256 "dbb1461cd53c1e284537c3ddcf92f54f24178519a3f1e335e49e5283993db0f7"
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/ad/eb/4e197bf26b023abafc5e9043ec8710d7de0fcb032d0969045236d72aa0b1/starlette-1.9.0.tar.gz"
-    sha256 "3d931de246ed870e35ce605974440816ef895e592f255d1396cfdf191d4c4318"
+    url "https://files.pythonhosted.org/packages/48/bb/3d8757f21e9a53d9035c9eb039a777047139a16bfdbedfc7a58241c3d914/starlette-1.10.0.tar.gz"
+    sha256 "b8399098d4c1e3522734f7235dc79b1fc967f96cf139c81e0fa30479e0685f9b"
   end
 
   resource "truststore" do
