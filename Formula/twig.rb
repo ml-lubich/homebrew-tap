@@ -9,8 +9,8 @@ class Twig < Formula
   sha256 "384d99663af837abce8192fc03c127d3777aee53668f08d876ffef85fc71f082"
   license "MIT"
 
-  depends_on "python@3.12"
   depends_on "rust" => :build
+  depends_on "python@3.12"
 
   resource "annotated-doc" do
     url "https://files.pythonhosted.org/packages/5a/8e/38aa427ed5402449e226975b649c5dc73ccadfefeb95e6aecb8f8ea4b6b6/annotated_doc-0.0.5.tar.gz"

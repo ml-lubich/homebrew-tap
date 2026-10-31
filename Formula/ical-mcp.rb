@@ -9,8 +9,8 @@ class IcalMcp < Formula
   sha256 "b22879c10f18f391e016f9ee0d33134f500c68a32480b3e334a03cd943da658b"
   license "MIT"
 
-  depends_on :macos
   depends_on "rust" => :build
+  depends_on :macos
   depends_on "openssl@3"
   depends_on "python@3.12"
 
@@ -205,7 +205,7 @@ class IcalMcp < Formula
   end
 
   def install
-    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix.to_s
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3").to_s
     virtualenv_install_with_resources
     bin.install_symlink libexec/"bin/ical"
     bin.install_symlink libexec/"bin/ical-mcp"
@@ -214,6 +214,6 @@ class IcalMcp < Formula
   test do
     assert_match "ical", shell_output("#{bin}/ical -h")
     assert_match "calendar", shell_output("#{bin}/ical agent schema")
-    assert_predicate bin/"ical-mcp", :exist?
+    assert_path_exists bin/"ical-mcp"
   end
 end

@@ -8,7 +8,7 @@
 # When you cut a new release, bump `url` to the new tag and update `sha256`
 # (curl -sL <url> | shasum -a 256).
 class ConfluenceCli < Formula
-  desc "Confluence CLI with bulk operations (move/mirror/delete), built for AI agents"
+  desc "Bulk-oriented automation for Confluence with move, mirror, and delete"
   homepage "https://github.com/ml-lubich/confluence-cli"
   url "https://github.com/ml-lubich/confluence-cli/archive/refs/tags/v2.19.0.tar.gz"
   sha256 "8a90052ab6e327a8c85dd883eb9797ca603f2c1f698d2f4c32a594243c534180"
