@@ -194,7 +194,7 @@ class VercelMcp < Formula
   end
 
   def install
-    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix.to_s
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3").to_s
     virtualenv_install_with_resources
     bin.install_symlink libexec/"bin/vgate"
     bin.install_symlink libexec/"bin/vgate-mcp"

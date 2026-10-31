@@ -5,8 +5,8 @@ class ImsgMcp < Formula
 
   desc "Fast, local iMessage CLI + MCP server (macOS only)"
   homepage "https://pypi.org/project/imsg-mcp/"
-  url "https://files.pythonhosted.org/packages/ac/a1/4e2d6179dc2d0e0e13a2d0cdf0218ff0801f23bcd8bb83bf47cbf65a2a5b/imsg_mcp-0.1.3.tar.gz"
-  sha256 "20619389d218d9b015285bf4af0560b9d0a3cb66275dfa2fee02d64a56354df1"
+  url "https://files.pythonhosted.org/packages/8b/6e/9b706f0643b743e99fa81469a67d62812f31c5657648c5bbd8c589f23a01/imsg_mcp-0.1.4.tar.gz"
+  sha256 "04b767a7ed0e6ebd7e18cdaee1e49c8b33bc57bbb6f68a373d80f74d61ccd38e"
   license "MIT"
 
   depends_on "rust" => :build
@@ -194,7 +194,7 @@ class ImsgMcp < Formula
   end
 
   def install
-    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix.to_s
+    ENV["OPENSSL_DIR"] = formula_opt_prefix("openssl@3").to_s
     virtualenv_install_with_resources
     bin.install_symlink libexec/"bin/imsg"
     bin.install_symlink libexec/"bin/imsg-mcp"
