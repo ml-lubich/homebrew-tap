@@ -11,35 +11,27 @@ brew install <formula>
 After adding this tap, install any formula by name:
 
 ```ruby
-brew "imsg-mcp"
-brew "imail-mcp"
-brew "inotes-mcp"
 brew "wa-mcp"
 brew "pdfify-md"
 brew "confluence-cli"
 brew "bitbucket-client"
 brew "vercel-mcp"
-brew "ical-mcp"
 brew "jenkins-mcp"
 brew "twig"
 brew "pyosascript"
 ```
 
-The old formula names (`ical`, `imail`, `imsg`, `inotes`, `wa`, and `vgate`) remain available as aliases. The installed command names stay `ical`/`ical-mcp`, `imail`, `imsg`/`imsg-mcp`, `inotes`, `wa`/`wa-mcp`, and `vgate`/`vgate-mcp`.
+The installed command names are unchanged for the remaining formulae.
 
 ## Formulae
 
-### imsg-mcp / imail-mcp / inotes-mcp / wa-mcp (agent CLI family)
+### wa-mcp
 
-Typer CLIs with `-h` / `--help` and `agent schema`. PyPI distributions: `imsg-mcp`, `imail-mcp`, `inotes-mcp`, and `wa-mcp`. The WhatsApp MCP entry point is still published as `mac-wa-mcp` until its distribution rename is released.
+WhatsApp CLI and MCP bridge. The WhatsApp MCP entry point is also published as `mac-wa-mcp`.
 
 ```bash
-brew install imsg-mcp
-brew install imail-mcp
-brew install inotes-mcp
 brew install wa-mcp
-imsg agent schema
-imail -h
+wa --help
 ```
 
 ### pdfify-md
@@ -85,16 +77,6 @@ vgate ls
 ```
 
 
-### ical-mcp
-
-macOS Calendar.app CLI and MCP server. PyPI: `ical-mcp` (command is `ical`).
-
-```bash
-brew install ical-mcp
-ical calendars
-```
-
-
 ### jenkins-mcp
 
 Jenkins CLI and MCP server. PyPI: `jenkins-mcp-cli`.
@@ -118,7 +100,7 @@ twig --help
 ## Notes
 
 The Node.js tools are also on npm (`pdfify-md`, `@ml-lubich/confluence-cli`).
-Python tools are also on PyPI: `imsg-mcp`, `imail-mcp`, `inotes-mcp`, `wa-mcp`, `mac-wa-mcp` (WhatsApp MCP entry point, pending rename), `bitbucket-client`, `vercel-mcp`, `ical-mcp`, `jenkins-mcp-cli`, `twig-cli`, `pyosascript`.
+Python tools are also on PyPI: `wa-mcp`, `mac-wa-mcp`, `bitbucket-client`, `vercel-mcp`, `jenkins-mcp-cli`, `twig-cli`, `pyosascript`.
 
 ## Documentation
 

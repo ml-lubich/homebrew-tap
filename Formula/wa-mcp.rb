@@ -2,7 +2,7 @@
 class WaMcp < Formula
   include Language::Python::Virtualenv
 
-  desc "WhatsApp CLI (wa) + MCP (wa-mcp) — imsg-family Typer tools"
+  desc "WhatsApp CLI (wa) and MCP bridge"
   homepage "https://pypi.org/project/wa-mcp/"
   url "https://files.pythonhosted.org/packages/e0/18/f1c2e505c2ca55639b267454206a3be5abe6a55313e1d9cbeb375bae700e/wa_mcp-0.1.2.tar.gz"
   sha256 "ae003b1a826d9d56307bbeb587a1b264b2286e182fd8d9ea6985c517ef77355e"
